@@ -1,0 +1,150 @@
+###
+GET http://localhost:4004/loyalty
+
+###
+POST http://localhost:4004/loyalty/Transactions
+Content-Type: application/json
+
+{
+    "customer_customerID": "11111111-1111-1111-1111-111111111111",
+    "channel": "Online",
+    "amount": 1000
+}
+
+###
+GET http://localhost:4004/loyalty/Customers(11111111-1111-1111-1111-111111111111)
+
+
+###
+POST http://localhost:4004/loyalty/Transactions
+Content-Type: application/json
+
+{
+    "customer_customerID": "11111111-1111-1111-1111-111111111111",
+    "channel": "Store",
+    "amount": 200
+}
+
+###
+GET http://localhost:4004/loyalty/Customers(11111111-1111-1111-1111-111111111111)
+
+
+
+###
+POST http://localhost:4004/loyalty/Transactions
+Content-Type: application/json
+
+{
+    "customer_customerID": "11111111-1111-1111-1111-111111111111",
+    "channel": "Store"
+}
+
+
+###
+POST http://localhost:4004/loyalty/Transactions
+Content-Type: application/json
+
+{
+    "customer_customerID": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+    "channel": "Store",
+    "amount": 100
+}
+
+
+###
+GET http://localhost:4004/loyalty/Customers(33333333-3333-3333-3333-333333333333)
+
+###
+POST http://localhost:4004/loyalty/Transactions
+Content-Type: application/json
+
+{
+    "customer_customerID": "33333333-3333-3333-3333-333333333333",
+    "channel": "Online",
+    "amount": 6000
+}
+
+###
+GET http://localhost:4004/loyalty/Customers(33333333-3333-3333-3333-333333333333)
+
+
+###
+POST http://localhost:4004/loyalty/Redemptions
+Content-Type: application/json
+
+{
+    "customer_customerID": "33333333-3333-3333-3333-333333333333",
+    "pointsUsed": 100,
+    "remarks": "Discount redemption"
+}
+
+###
+GET http://localhost:4004/loyalty/Customers(33333333-3333-3333-3333-333333333333)
+
+
+###
+POST http://localhost:4004/loyalty/Redemptions
+Content-Type: application/json
+
+{
+    "customer_customerID": "33333333-3333-3333-3333-333333333333",
+    "pointsUsed": 77777777,
+    "remarks": "Discount redemption"
+}
+
+###
+POST http://localhost:4004/loyalty/Redemptions
+Content-Type: application/json
+
+{
+    "customer_customerID": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+    "pointsUsed": 77777777,
+    "remarks": "Discount redemption"
+}
+
+
+###
+POST http://localhost:4004/loyalty/Redemptions
+Content-Type: application/json
+
+{
+    "customer_customerID": "33333333-3333-3333-3333-333333333333",
+    "pointsUsed": 0,
+    "remarks": "Discount redemption"
+}
+
+
+###
+POST http://localhost:4004/loyalty/Redemptions
+Content-Type: application/json
+
+{
+    "pointsUsed": 0,
+    "remarks": "Discount redemption"
+}
+
+###
+POST http://localhost:4004/loyalty/Redemptions
+Content-Type: application/json
+
+{
+    "customer_customerID": "33333333-3333-3333-3333-333333333333",
+    "pointsUsed": 200,
+    "remarks": "Discount redemption"
+}
+
+###
+GET http://localhost:4004/loyalty/Customers(33333333-3333-3333-3333-333333333333)
+
+###
+POST http://localhost:4004/loyalty/Redemptions
+Content-Type: application/json
+
+{
+    "customer_customerID": "33333333-3333-3333-3333-333333333333",
+    "pointsUsed": 500,
+    "remarks": "Discount redemption"
+}
+
+###
+GET http://localhost:4004/loyalty/Customers(33333333-3333-3333-3333-333333333333)

@@ -1,0 +1,90 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <VBox id="transactionBox">
+
+        <Title
+            id="transactionTitle"
+            text="Transactions"
+            level="H3"/>
+
+        <Table
+            id="transactionTable"
+            items="{transactions}"
+            width="100%"
+            growing="true"
+            growingThreshold="10">
+
+            <columns>
+
+                <Column id="txnIdColumn">
+                    <Text
+                        id="txnIdHeader"
+                        text="Transaction ID"/>
+                </Column>
+
+                <Column id="channelColumn">
+                    <Text
+                        id="channelHeader"
+                        text="Channel"/>
+                </Column>
+
+                <Column id="amountColumn">
+                    <Text
+                        id="amountHeader"
+                        text="Amount"/>
+                </Column>
+
+                <Column id="dateColumn">
+                    <Text
+                        id="dateHeader"
+                        text="Transaction Date"/>
+                </Column>
+
+                <Column id="pointsColumn">
+                    <Text
+                        id="pointsHeader"
+                        text="Points Earned"/>
+                </Column>
+
+            </columns>
+
+            <items>
+
+                <ColumnListItem id="transactionRow">
+
+                    <cells>
+
+                        <Text
+                            id="txnIdText"
+                            text="{txnID}"/>
+
+                        <Text
+                            id="channelText"
+                            text="{channel}"/>
+
+                        <Text
+                            id="amountText"
+                            text="{amount}"/>
+
+                        <Text
+                            id="dateText"
+                            text="{txnDate}"/>
+
+                        <ObjectNumber
+                            id="pointsText"
+                            number="{pointsEarned}"
+                            unit="Points"/>
+
+                    </cells>
+
+                </ColumnListItem>
+
+            </items>
+
+        </Table>
+
+    </VBox>
+
+</core:FragmentDefinition>

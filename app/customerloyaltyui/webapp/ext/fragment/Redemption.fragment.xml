@@ -1,0 +1,90 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <VBox id="redemptionsBox">
+
+        <Title
+            id="redemptionsTitle"
+            text="Redemptions"
+            level="H3"/>
+
+        <Table
+            id="redemptionsTable"
+            items="{redemptions}"
+            width="100%"
+            growing="true"
+            growingThreshold="10">
+
+            <columns>
+
+                <Column id="redeemIdColumn">
+                    <Text
+                        id="redeemIdHeader"
+                        text="Redemption ID"/>
+                </Column>
+
+                <Column id="pointsUsedColumn">
+                    <Text
+                        id="pointsUsedHeader"
+                        text="Points Used"/>
+                </Column>
+
+                <Column id="redeemDateColumn">
+                    <Text
+                        id="redeemDateHeader"
+                        text="Redemption Date"/>
+                </Column>
+
+                <Column id="remarksColumn">
+                    <Text
+                        id="remarksHeader"
+                        text="Remarks"/>
+                </Column>
+
+            </columns>
+
+            <items>
+
+                <ColumnListItem id="redemptionRow">
+
+                    <cells>
+
+                        <Text
+                            id="redeemIdText"
+                            text="{redeemID}"/>
+
+                        <ObjectNumber
+                            id="pointsUsedText"
+                            number="{pointsUsed}"
+                            unit="Points"
+                        />
+
+                        <Text
+                            id="redeemDateText"
+                            text="{
+                                path: 'redeemDate',
+                                type: 'sap.ui.model.type.DateTime',
+                                formatOptions: {
+                                    source: {
+                                        pattern: 'yyyy-MM-dd\'T\'HH:mm:ss\'Z\''
+                                    },
+                                    style: 'medium'
+                                }
+                            }"/>
+
+                        <Text
+                            id="remarksText"
+                            text="{remarks}"/>
+
+                    </cells>
+
+                </ColumnListItem>
+
+            </items>
+
+        </Table>
+
+    </VBox>
+
+</core:FragmentDefinition>
